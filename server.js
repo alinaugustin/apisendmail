@@ -107,7 +107,7 @@ app.post("/api", function(req, res, next) {
 });
 //app.get('/users', userRoutes)
 //app.get('/users/:nr', userRoutes)
-
+app.post("/sendmail", userRoutes);
 app.post("/login", userRoutes);
 //app.get('/login', userRoutes)
 
