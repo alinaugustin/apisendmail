@@ -176,17 +176,18 @@ var port = process.env.PORT || 4000;
 app.get("/", (req, res) => {
   res.send("api running...");
 });
-https
-  .createServer(
-    {
-      key: fs.readFileSync("cert/localhost.key"),
-      cert: fs.readFileSync("cert/localhost.cert")
-    },
-    app
-  )
-  .listen(port, () => {
+//https
+//  .createServer(
+ //   {
+ //     key: fs.readFileSync("cert/localhost.key"),
+  //    cert: fs.readFileSync("cert/localhost.cert")
+ //   },
+ //   app
+ // )
+ // .listen(port, () => {
     // eslint-disable-next-line no-console
-    console.log("Listening... " + port);
-  });
-//app.listen(port)
+  //  console.log("Listening... " + port);
+ // });
+app.listen(port)
+console.log("Listening... " + port);
 module.exports = app;
