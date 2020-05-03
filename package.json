@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "bcrypt": "^3.0.6",
@@ -20,12 +22,14 @@
     "node-fetch": "^2.6.0",
     "nodemailer": "^6.3.1",
     "openssl": "^1.1.0",
-    "uuid4": "^1.1.4"
+    "uuid4": "^1.1.4",
+    "snyk": "^1.316.2"
   },
   "devDependencies": {
     "fs": "0.0.1-security",
     "nodemon": "^1.18.11"
   },
   "author": "alindebian",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
